@@ -1,0 +1,4 @@
+.kube/
+*.key
+*.crt
+admin.conf
