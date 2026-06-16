@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-index-html
+  namespace: default
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>My K8s VMware Lab</title>
+        <style>
+            body { font-family: sans-serif; background: #121214; color: #e1e1e6; text-align: center; padding: 50px; }
+            h1 { color: #00ff87; }
+        </style>
+    </head>
+    <body>
+        <h1>Hello from my VMware Kubernetes Cluster!</h1>
+        <p>This custom page is served from a Kubernetes ConfigMap mounted as a volume.</p>
+    </body>
+    </html>

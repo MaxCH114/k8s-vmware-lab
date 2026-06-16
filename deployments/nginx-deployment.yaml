@@ -22,3 +22,12 @@ spec:
         image: nginx
         ports:
         - containerPort: 80
+          # --- Add this volumeMount block ---
+        volumeMounts:
+        - name: html-volume
+          mountPath: /usr/share/nginx/html
+      # --- Add this volumes block ---
+      volumes:
+      - name: html-volume
+        configMap:
+          name: nginx-index-html
